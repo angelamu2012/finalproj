@@ -34,7 +34,7 @@ function NewCard(props) {
       if(response?.status === 200) {
         setTitle("");
         setContent("");
-        props.onAdd(title, content);
+        props.onAdd();
       }
     };
     if (title.length > 0 && content.length > 0) {
