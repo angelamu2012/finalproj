@@ -8,17 +8,11 @@ function App() {
   const [data, setData] = React.useState([]);
   const [dataUpdated, setDataUpdated] = useState(true);
 
-  function saveData(title, content) {
-    // setData([...data, { title: title, content: content }]);
+  function saveData() {
     setDataUpdated(!dataUpdated);
   }
 
   function removeFromList(id) {
-    // setData((data) => {
-    //   return data.filter((item, index) => {
-    //     return index !== id;
-    //   });
-    // });
     async function deleteData (id) {
       console.log("delete id: ", id)
       const response = await fetch("http://localhost:3000/api/deleteData/" + id, {
